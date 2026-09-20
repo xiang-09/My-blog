@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as r,a0 as o}from"./chunks/framework.DqMqoJl9.js";const f=JSON.parse('{"title":"友链","description":"","frontmatter":{},"headers":[],"relativePath":"friends.md","filePath":"friends.md"}'),i={name:"friends.md"};function n(s,a,l,d,_,c){return t(),r("div",null,[...a[0]||(a[0]=[o("",6)])])}const p=e(i,[["render",n]]);export{f as __pageData,p as default};

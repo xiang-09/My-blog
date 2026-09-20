@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as r,a0 as o}from"./chunks/framework.DqMqoJl9.js";const b=JSON.parse('{"title":"你好，我是向雅婷","description":"","frontmatter":{},"headers":[],"relativePath":"index.md","filePath":"index.md"}'),i={name:"index.md"};function l(h,a,n,c,d,s){return t(),r("div",null,[...a[0]||(a[0]=[o("",10)])])}const _=e(i,[["render",l]]);export{b as __pageData,_ as default};

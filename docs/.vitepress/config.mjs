@@ -9,6 +9,14 @@ export default {
       { text: '归档', link: '/archive/' },
       { text: '友链', link: '/friends' },
       { text: '关于我', link: '/about' }
+    ],
+    sidebar: [
+      {
+        text: '学习笔记',
+        items: [
+          { text: 'VitePress部署踩坑记录', link: '/archive/notes/vitepress-github-deploy' }
+        ]
+      }
     ]
   }
 }

@@ -7,6 +7,6 @@
 > 后续可在archive下新建 blog / notes / talk 三个文件夹分类存放Markdown文档。
 
 ## 归档分类入口
-- 技术博客：/archive/blog/
-- 学习笔记：/archive/notes/
-- 杂谈随笔：/archive/talk/
+- [技术博客](/archive/blog/)
+- [学习笔记](/archive/notes/)
+- [杂谈随笔](/archive/talks/)

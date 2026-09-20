@@ -1,4 +1,5 @@
 export default {
+  base: '/My-blog/',
   title: "我的IT学习记录站",
   description: "记录IT学习生涯，项目作品集与学习归档",
   themeConfig: {

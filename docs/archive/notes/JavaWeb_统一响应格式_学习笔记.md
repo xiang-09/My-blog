@@ -323,7 +323,7 @@ Java 区分大小写。
 
 ---
 
-## 7. Result<T>：统一响应格式
+## 7. Result\<T\>：统一响应格式
 
 ```java
 package com.example;
@@ -633,7 +633,7 @@ Result<User> result = Result.success(user);
 
 ---
 
-## 12. 反序列化与 Class<T>
+## 12. 反序列化与 Class\<T\>
 
 JSON 转 Java：
 
@@ -651,7 +651,7 @@ Result<User> result =
 Result 中的 data 是 User
 ```
 
-### 为什么需要 Class<T>
+### 为什么需要 Class\<T\>
 
 因为 Java 泛型存在类型擦除，运行时不能简单通过 `T` 知道具体类型。
 
@@ -697,7 +697,7 @@ Class<T> clazz
 
 ---
 
-## 14. Result<List<User>> 与 TypeReference
+## 14. Result\<List\<User\>\> 与 TypeReference
 
 普通：
 
@@ -1571,7 +1571,7 @@ Producer Extends
 
 ## 31. 实验答辩常见问题
 
-### 为什么使用 Result<T>？
+### 为什么使用 Result\<T\>？
 
 为了统一 API 响应结构，同时通过泛型让 `data` 支持不同类型。
 
@@ -1579,7 +1579,7 @@ Producer Extends
 
 因为 Java 泛型存在类型擦除，运行时不知道 `T` 的具体类型。
 
-### Class<T> 有什么用？
+### Class\<T\> 有什么用？
 
 显式传递真实类型，例如：
 

@@ -1,0 +1,330 @@
+/* =========================================================
+    昭和复古少女帐 · VitePress主题
+    配色：泛黄米黄 / 豆沙粉 / 焦糖棕 / 灰蓝
+    元素：细格纹底纹、胶带边框、复古贴纸、旧纸张质感
+========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@400;600&display=swap');
+
+:root {
+  /* 主色：复古焦糖棕 */
+  --vp-c-brand-1: #9c6c56;
+  --vp-c-brand-2: #b8866c;
+  --vp-c-brand-3: #d4b39f;
+
+  /* 昭和豆沙粉 */
+  --vp-c-pink-1: #c9888b;
+  --vp-c-pink-2: #dba9ac;
+  --vp-c-pink-soft: #f6e4e4;
+
+  /* 旧纸张底色 */
+  --vp-c-bg: #f7f1e6;
+  --vp-c-bg-alt: #efe7da;
+  --vp-c-bg-soft: #f3ece0;
+  --vp-c-bg-elv: #fffaf2;
+
+  /* 文字 棕调 */
+  --vp-c-text-1: #4b3b32;
+  --vp-c-text-2: #7a665a;
+  --vp-c-text-3: #a89484;
+
+  /* 边框 */
+  --vp-c-border: #ddcdbc;
+  --vp-c-divider: #e4d7c6;
+  --vp-c-gutter: #ede1d1;
+
+  /* 圆角，偏柔和矩形，不做超大圆弧 */
+  --vp-radius-sm: 6px;
+  --vp-radius: 10px;
+  --vp-radius-lg: 16px;
+
+  /* 字体 */
+  --vp-font-family-base: "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+  --vp-font-family-title: "ZCOOL KuaiLe", "Noto Serif SC", serif;
+  --vp-font-family-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* 柔和阴影，像纸卡片浮起 */
+  --vp-shadow-1: 0 1px 5px rgba(90,65,45,0.07);
+  --vp-shadow-2: 0 4px 12px rgba(90,65,45,0.09);
+  --vp-shadow-3: 0 8px 20px rgba(90,65,45,0.11);
+}
+
+/* ---------- 暗色模式：暗调昭和复古 ---------- */
+.dark {
+  --vp-c-brand-1: #d4b39f;
+  --vp-c-brand-2: #b8866c;
+  --vp-c-brand-3: #9c6c56;
+
+  --vp-c-pink-1: #dba9ac;
+  --vp-c-pink-2: #c9888b;
+  --vp-c-pink-soft: #423234;
+
+  --vp-c-bg: #2c241f;
+  --vp-c-bg-alt: #241d19;
+  --vp-c-bg-soft: #342b24;
+  --vp-c-bg-elv: #3d332b;
+
+  --vp-c-text-1: #f0e6d8;
+  --vp-c-text-2: #c8b8a6;
+  --vp-c-text-3: #9c8c7b;
+
+  --vp-c-border: #524438;
+  --vp-c-divider: #463a30;
+  --vp-c-gutter: #352c24;
+}
+
+/* ---------- 背景：细格纹旧纸张，昭和灵魂 ---------- */
+body {
+  background-color: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  font-family: var(--vp-font-family-base);
+  /* 淡格子 + 泛黄径向渐变，纯CSS无需图片 */
+  background-image:
+    repeating-linear-gradient(0deg,transparent,transparent 24px,rgba(140,115,90,0.04) 24px,rgba(140,115,90,0.04) 25px),
+    repeating-linear-gradient(90deg,transparent,transparent 24px,rgba(140,115,90,0.04) 24px,rgba(140,115,90,0.04) 25px),
+    radial-gradient(circle at 20% 15%, rgba(201,136,139,0.08), transparent 32%),
+    radial-gradient(circle at 85% 80%, rgba(156,108,86,0.07), transparent 30%);
+  background-attachment: fixed;
+}
+.dark body {
+  background-image:
+    repeating-linear-gradient(0deg,transparent,transparent 24px,rgba(180,150,120,0.03) 24px,rgba(180,150,120,0.03) 25px),
+    repeating-linear-gradient(90deg,transparent,transparent 24px,rgba(180,150,120,0.03) 24px,rgba(180,150,120,0.03) 25px);
+}
+
+/* ---------- 标题样式：复古手写感，蝴蝶结小装饰 ---------- */
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4 {
+  font-family: var(--vp-font-family-title);
+  color: var(--vp-c-text-1);
+  letter-spacing: 0.4px;
+}
+.vp-doc h1 {
+  font-size:32px;
+  border-left:5px solid var(--vp-c-brand-2);
+  padding-left:16px;
+  line-height:1.45;
+}
+.vp-doc h2 {
+  font-size:25px;
+  border-bottom:1.5px solid var(--vp-c-divider);
+  padding-bottom:6px;
+  margin-top:42px;
+}
+.vp-doc h2::before {
+  content: "❀ ";
+  color: var(--vp-c-pink-1);
+}
+.vp-doc h3 {
+  font-size:20px;
+  color: var(--vp-c-brand-1);
+  padding-left:10px;
+  border-left:3px dashed var(--vp-c-pink-2);
+}
+
+/* ---------- 正文段落 ---------- */
+.vp-doc p {
+  line-height:1.85;
+  color: var(--vp-c-text-1);
+}
+
+/* ---------- 链接：复古手账贴纸链接 ---------- */
+.vp-doc a {
+  color: var(--vp-c-brand-1);
+  font-weight:500;
+  text-decoration:none;
+  border-bottom:1px dashed var(--vp-c-pink-2);
+  transition: all 0.24s ease;
+}
+.vp-doc a:hover {
+  color: var(--vp-c-pink-1);
+  border-bottom-style: solid;
+}
+
+/* ---------- 引用块：昭和便签纸，胶带侧边 ---------- */
+.vp-doc blockquote {
+  border-left: 5px solid var(--vp-c-pink-1);
+  background: var(--vp-c-pink-soft);
+  border-radius: 0 var(--vp-radius) var(--vp-radius) 0;
+  padding:16px 20px;
+  color: var(--vp-c-text-2);
+  box-shadow: var(--vp-shadow-1);
+}
+
+/* ---------- 列表：小圆点，复古手账项目符号 ---------- */
+.vp-doc ul {
+  list-style: none;
+  padding-left:12px;
+}
+.vp-doc ul li::before {
+  content: "✦";
+  color: var(--vp-c-brand-2);
+  margin-right: 8px;
+}
+.vp-doc ol {
+  padding-left:24px;
+}
+.vp-doc li {
+  line-height:1.85;
+}
+
+/* ---------- 代码块：泛黄稿纸代码框 ---------- */
+.vp-doc div[class*="language-"] {
+  background-color: #efe7da;
+  border:1px solid var(--vp-c-border);
+  border-radius: var(--vp-radius);
+  box-shadow: var(--vp-shadow-1);
+}
+.dark .vp-doc div[class*="language-"] {
+  background-color: #342b24;
+}
+.vp-doc :not(pre) > code {
+  background: var(--vp-c-bg-alt);
+  color:#9c6c56;
+  padding:2px 7px;
+  border-radius:5px;
+}
+.dark .vp-doc :not(pre) > code {
+  background:#423234;
+  color:#dba9ac;
+}
+
+/* ---------- 提示块：彩色复古便签卡片 ---------- */
+.custom-block {
+  border-radius: var(--vp-radius);
+  border:1px solid var(--vp-c-border);
+  background: var(--vp-c-bg-elv);
+  box-shadow: var(--vp-shadow-1);
+  padding:16px 18px;
+}
+.custom-block.info {
+  border-left:4px solid var(--vp-c-brand-1);
+  background: #f3ece0;
+}
+.dark .custom-block.info {
+  background:#342b24;
+}
+.custom-block.tip {
+  border-left:4px solid var(--vp-c-pink-1);
+  background: var(--vp-c-pink-soft);
+}
+.custom-block.warning {
+  border-left:4px solid #c2946b;
+  background: #f7e9da;
+}
+.custom-block.danger {
+  border-left:4px solid #b96c6c;
+  background: #f5e2e2;
+}
+.custom-block-title {
+  font-family: var(--vp-font-family-title);
+  font-size:17px;
+}
+
+/* ---------- 表格：复古方格表格 ---------- */
+.vp-doc table {
+  border-radius: var(--vp-radius);
+  overflow:hidden;
+  box-shadow: var(--vp-shadow-1);
+}
+.vp-doc th {
+  background: var(--vp-c-bg-alt);
+  color: var(--vp-c-text-1);
+  font-weight:600;
+}
+.vp-doc tr:nth-child(2n) {
+  background: var(--vp-c-bg-soft);
+}
+
+/* ---------- 分割线：手账虚线分隔 ---------- */
+.vp-doc hr {
+  border:none;
+  border-top:2px dashed var(--vp-c-divider);
+  margin:30px 0;
+}
+
+/* ---------- 导航栏：半透米黄，复古标题 ---------- */
+.VPNavBar {
+  background-color: rgba(247, 241, 230, 0.84);
+  backdrop-filter: saturate(130%) blur(10px);
+  border-bottom:1px solid var(--vp-c-divider);
+}
+.dark .VPNavBar {
+  background-color: rgba(44, 36, 31, 0.84);
+}
+.VPNavBar .title {
+  font-family: var(--vp-font-family-title);
+  font-size:20px;
+  color: var(--vp-c-text-1);
+}
+.VPNavBar .title::after {
+  content: " ✿";
+}
+
+/* ---------- 侧边栏 ---------- */
+.VPSidebar {
+  background-color: var(--vp-c-bg-alt);
+  border-right:1px solid var(--vp-c-divider);
+}
+.VPSidebarItem .text {
+  color: var(--vp-c-text-2);
+}
+.VPSidebarItem.is-active .text {
+  color: var(--vp-c-brand-1);
+  font-weight:600;
+}
+
+/* ---------- 按钮 ---------- */
+.VPButton {
+  border-radius: var(--vp-radius-sm);
+  font-weight:600;
+  padding:0 18px;
+}
+.VPButton.brand {
+  background: var(--vp-c-brand-1);
+  color:#fffaf2;
+}
+.VPButton.brand:hover {
+  background: var(--vp-c-pink-1);
+}
+
+/* ---------- 友链卡片：昭和复古贴纸卡片【重点！活人感】 ---------- */
+.friend-card {
+  border:1px solid var(--vp-c-border);
+  border-radius: var(--vp-radius-lg);
+  padding:20px;
+  margin:16px 0;
+  background: var(--vp-c-bg-elv);
+  box-shadow: var(--vp-shadow-1);
+  transition: all 0.3s ease;
+  /* 模拟手账轻微倾斜 */
+}
+.friend-card:hover {
+  transform: translateY(-3px) rotate(-0.3deg);
+  border-color: var(--vp-c-pink-1);
+  box-shadow: var(--vp-shadow-2);
+}
+
+/* ---------- 首页Hero区域 柔光复古渐变 ---------- */
+.VPHero {
+  background:
+    linear-gradient(180deg, rgba(201,136,139,0.14), rgba(247,241,230,0) 60%),
+    linear-gradient(180deg, rgba(156,108,86,0.09), rgba(247,241,230,0) 60%);
+}
+
+/* ---------- 滚动条 ---------- */
+::-webkit-scrollbar {
+  width:9px;
+  height:9px;
+}
+::-webkit-scrollbar-track {
+  background: var(--vp-c-bg-alt);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-border);
+  border-radius:8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-brand-2);
+}

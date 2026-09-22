@@ -13,7 +13,7 @@
 > 精选项目整理中，敬请期待。
 
 ## 联系方式
-- GitHub：https://github.com/你的Github账号
-- 邮箱：xxx@xxx.com
+- GitHub：https://github.com/xiang-09
+- 邮箱：1162404625@qq.com
 
 

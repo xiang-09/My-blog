@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as r,a0 as o}from"./chunks/framework.DUAiDAGh.js";const _=JSON.parse('{"title":"关于我","description":"","frontmatter":{},"headers":[],"relativePath":"about.md","filePath":"about.md"}'),i={name:"about.md"};function l(n,a,s,d,h,c){return t(),r("div",null,[...a[0]||(a[0]=[o("",10)])])}const p=e(i,[["render",l]]);export{_ as __pageData,p as default};

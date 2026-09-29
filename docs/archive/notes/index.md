@@ -6,3 +6,4 @@
 - [Java 泛型与 Web API 统一响应设计笔记](/archive/notes/Java泛型与Result统一响应笔记)
 - [JavaWeb_统一响应格式_学习笔记](/archive/notes/JavaWeb_统一响应格式_学习笔记)
 - [代码评审产出文档_通用模板](/archive/notes/代码评审产出文档_通用模板.md)
+- [Java反射注解动态代理与MiniIOC笔记](/archive/notes/Java反射注解动态代理与MiniIOC笔记.md)
